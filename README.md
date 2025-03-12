@@ -1,28 +1,83 @@
-React Native User Display App
-📌 Overview
-This project is a React Native application that displays user information retrieved from an API. Users can navigate between different profiles using Previous and Next buttons. The app provides a simple and intuitive UI for viewing user details such as name, email, avatar, and ID.
+# React Native User Display App
 
-🛠️ How to Run the Application Locally
-1. Clone the Repository
-Open your terminal and run:
-git clone https://github.com/DhanshriBorase-15/ReactNativeApp.git
-cd ReactNativeApp
+## Overview
+This is a **React Native** application that fetches and displays user information from an API. The app allows users to navigate through different user profiles using **Previous** and **Next** buttons.
 
-2. Install Dependencies
-Ensure you have Node.js installed, then run:
-npm install
+## Features
+- Fetches user data from an external API.
+- Displays user details, including **Avatar, Name, Email, ID, and UID**.
+- Provides navigation buttons to switch between users.
+- Displays a loading indicator while fetching data.
+- Implements **clean UI** with proper styling and a structured layout.
 
-3. Start the Application
-For Android: npx react-native run-android
-For iOS (Mac required): npx react-native run-ios
+## Technologies Used
+- **React Native**
+- **JavaScript**
+- **API Integration**
 
-📡 API Integration
-The app fetches user data from an external API. Ensure your internet connection is active to retrieve user information successfully.
+## Installation & Setup
 
-🚀 Technologies Used
-React Native for UI
-Axios for API requests
-React Hooks for state management
+### Prerequisites
+Make sure you have the following installed:
+- **Node.js**
+- **React Native CLI**
+- **Android Studio/Xcode** (for emulator or real device testing)
 
-📌 Additional Notes
-Ensure your system is set up for React Native development (Setup Guide).
+### Steps to Run Locally
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/DhanshriBorase-15/ReactNativeApp.git
+   ```
+2. **Navigate to the project directory**
+   ```sh
+   cd ReactNativeApp
+   ```
+3. **Install dependencies**
+   ```sh
+   npm install
+   ```
+4. **Run the app on an Android emulator or device**
+   ```sh
+   npx react-native run-android
+   ```
+   OR for iOS:
+   ```sh
+   npx react-native run-ios
+   ```
+
+## Folder Structure
+```
+ReactNativeApp/
+│-- src/
+│   │-- components/
+│   │   ├── UserInfoScreen.js
+│   │-- api/
+│   │   ├── apiService.js
+│   ├── App.js
+│   ├── index.js
+│-- package.json
+│-- .gitignore
+│-- README.md
+```
+
+## API Integration
+The application fetches user data from an external API using the `fetchUsers` function.
+```js
+import { fetchUsers } from "../api/apiService";
+```
+
+## Notes & Considerations
+- The app **fetches user data once** when it loads.
+- User details are **read-only**.
+- **Pagination** is implemented using **Previous** and **Next** buttons.
+- The app follows **clean UI** principles with consistent styling.
+
+## Contributing
+If you'd like to contribute:
+1. **Fork the repository**
+2. **Create a feature branch** (`git checkout -b feature-name`)
+3. **Commit changes** (`git commit -m 'Add feature'`)
+4. **Push to GitHub** (`git push origin feature-name`)
+5. **Open a Pull Request**
+
+
